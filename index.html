@@ -5,32 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* Ajuste de margens e espaçamento */
         .academic-section h3 {
             margin-top: 0.1px;
-            /* Ajuste o valor conforme necessário */
         }
-
+    
         .academic-section p {
             margin-top: 1px;
             margin-bottom: 3px;
-            /* Ajuste o valor conforme necessário */
         }
-
+    
         .academic-section ul {
             margin-top: 1px;
-            /* Remove margem superior se necessário */
         }
-
+    
         section ul li {
-            line-height: 0.2;
+            line-height: 1.5;
+            margin-bottom: 5px; /* Adiciona espaço entre os itens da lista */
         }
-
-
+    
         section>div {
             margin-bottom: 35px;
         }
-
+    
+        /* Estilo geral do corpo */
         body {
             font-family: Calibri, sans-serif;
             margin: 20px;
@@ -38,19 +38,20 @@
             color: black;
             background-color: white;
         }
-
+    
         header,
         section {
             margin-bottom: 25px;
         }
-
+    
         h1,
         h2,
         h3 {
             margin: 3px 0;
             color: inherit;
         }
-
+    
+        /* Informações de contato e perfis */
         .contact-info,
         .profiles,
         ul {
@@ -58,87 +59,163 @@
             list-style: none;
             padding: 0;
         }
-
+    
         .profiles a {
             text-decoration: none;
         }
-
+    
         .profiles a:hover {
             color: rgb(6, 14, 255);
-            /* Links ficam coloridos ao passar o mouse */
         }
-
+    
         .highlight {
             margin-bottom: 5px;
             padding: 5px;
-            /* Padding para dar espaço ao texto */
         }
-
+    
         .date {
             float: right;
             font-size: 0.85em;
             color: rgb(0, 0, 0);
-            /* Data em preto */
             font-weight: normal;
         }
-
+    
         section {
             border-top: 1px solid lightgray;
-            /* Bordas em cinza claro */
             padding-top: 10px;
         }
-
+    
         .academic-section {
             margin-bottom: 40px;
         }
-
+    
         .skills {
             display: inline;
             margin-right: 10px;
             color: inherit;
-            /* Herda a cor do texto */
         }
-
+    
+        /* Estilo de botões */
         button {
             padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
             background-color: black;
-            /* Botões em preto */
             color: white;
-            /* Texto do botão em branco */
             border: none;
             border-radius: 4px;
             transition: background-color 0.3s;
-            /* Efeito de transição suave */
         }
-
+    
         button:hover {
             background-color: gray;
-            /* Botão fica cinza ao passar o mouse */
         }
-
+    
+        /* Botões alinhados verticalmente no canto superior direito */
         .translation-buttons {
             position: fixed;
             top: 10px;
             right: 10px;
             z-index: 1000;
             background: black;
-            /* Botões de tradução em preto */
             color: white;
-            /* Texto em branco */
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             padding: 5px;
+            display: flex;
+            flex-direction: column;
         }
-
+    
+        .translation-buttons button {
+            margin-bottom: 5px;
+            width: 100px; /* Largura fixa para os botões */
+        }
+    
         @media print {
             .translation-buttons {
                 display: none;
-                /* Oculta os botões ao imprimir */
+            }
+        }
+    
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+                padding: 0 10px;
+            }
+    
+            h1 {
+                font-size: 1.8em;
+            }
+    
+            h2 {
+                font-size: 1.5em;
+            }
+    
+            h3 {
+                font-size: 1.2em;
+            }
+    
+            .date {
+                font-size: 0.75em;
+            }
+    
+            button {
+                padding: 8px 16px;
+            }
+    
+            /* Botões alinhados verticalmente e ajustados para dispositivos móveis */
+            .translation-buttons {
+                top: 5px;
+                right: 5px;
+                padding: 3px;
+            }
+    
+            .translation-buttons button {
+                width: 80px; /* Botões menores para dispositivos móveis */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            body {
+                margin: 5px;
+                padding: 0 5px;
+            }
+    
+            h1 {
+                font-size: 1.5em;
+            }
+    
+            h2 {
+                font-size: 1.3em;
+            }
+    
+            h3 {
+                font-size: 1.1em;
+            }
+    
+            .date {
+                font-size: 0.65em;
+            }
+    
+            button {
+                padding: 6px 12px;
+            }
+    
+            .translation-buttons {
+                top: 3px;
+                right: 3px;
+                padding: 2px;
+            }
+    
+            .translation-buttons button {
+                width: 70px; /* Botões ainda menores para telas muito pequenas */
             }
         }
     </style>
+    
+    
+    
 
 
 
