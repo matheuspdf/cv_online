@@ -11,25 +11,26 @@
         .academic-section h3 {
             margin-top: 0.1px;
         }
-    
+
         .academic-section p {
             margin-top: 1px;
             margin-bottom: 3px;
         }
-    
+
         .academic-section ul {
             margin-top: 1px;
         }
-    
+
         section ul li {
             line-height: 1.5;
-            margin-bottom: 5px; /* Adiciona espaço entre os itens da lista */
+            margin-bottom: 5px;
+            /* Adiciona espaço entre os itens da lista */
         }
-    
+
         section>div {
             margin-bottom: 35px;
         }
-    
+
         /* Estilo geral do corpo */
         body {
             font-family: Calibri, sans-serif;
@@ -38,19 +39,19 @@
             color: black;
             background-color: white;
         }
-    
+
         header,
         section {
             margin-bottom: 25px;
         }
-    
+
         h1,
         h2,
         h3 {
             margin: 3px 0;
             color: inherit;
         }
-    
+
         /* Informações de contato e perfis */
         .contact-info,
         .profiles,
@@ -59,42 +60,42 @@
             list-style: none;
             padding: 0;
         }
-    
+
         .profiles a {
             text-decoration: none;
         }
-    
+
         .profiles a:hover {
             color: rgb(6, 14, 255);
         }
-    
+
         .highlight {
             margin-bottom: 5px;
             padding: 5px;
         }
-    
+
         .date {
             float: right;
             font-size: 0.85em;
             color: rgb(0, 0, 0);
             font-weight: normal;
         }
-    
+
         section {
             border-top: 1px solid lightgray;
             padding-top: 10px;
         }
-    
+
         .academic-section {
             margin-bottom: 40px;
         }
-    
+
         .skills {
             display: inline;
             margin-right: 10px;
             color: inherit;
         }
-    
+
         /* Estilo de botões */
         button {
             padding: 10px 20px;
@@ -106,11 +107,11 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
-    
+
         button:hover {
             background-color: gray;
         }
-    
+
         /* Botões alinhados verticalmente no canto superior direito */
         .translation-buttons {
             position: fixed;
@@ -125,97 +126,110 @@
             display: flex;
             flex-direction: column;
         }
-    
+
         .translation-buttons button {
             margin-bottom: 5px;
-            width: 100px; /* Largura fixa para os botões */
+            width: 100px;
+            /* Largura fixa para os botões */
         }
-    
+
         @media print {
             .translation-buttons {
                 display: none;
             }
         }
-    
+
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
             body {
                 margin: 10px;
                 padding: 0 10px;
             }
-    
+
+            section ul li {
+                line-height: 1;
+                margin-bottom: 1px;
+                /* Adiciona espaço entre os itens da lista */
+            }
+
             h1 {
                 font-size: 1.8em;
             }
-    
+
             h2 {
                 font-size: 1.5em;
             }
-    
+
             h3 {
                 font-size: 1.2em;
             }
-    
+
             .date {
                 font-size: 0.75em;
             }
-    
             button {
-                padding: 8px 16px;
+                padding: 11px 5px;
             }
-    
+
             /* Botões alinhados verticalmente e ajustados para dispositivos móveis */
             .translation-buttons {
                 top: 5px;
                 right: 5px;
                 padding: 3px;
             }
-    
+
             .translation-buttons button {
-                width: 80px; /* Botões menores para dispositivos móveis */
+                width: 80px;
+                /* Botões menores para dispositivos móveis */
             }
         }
-    
+
         @media (max-width: 480px) {
             body {
                 margin: 5px;
                 padding: 0 5px;
             }
-    
+            button {
+                padding: 11px 5px;
+            }
+
+            section ul li {
+                line-height: 1;
+                margin-bottom: 1px;
+                /* Adiciona espaço entre os itens da lista */
+            }
+
             h1 {
                 font-size: 1.5em;
             }
-    
+
             h2 {
                 font-size: 1.3em;
             }
-    
+
             h3 {
                 font-size: 1.1em;
             }
-    
+
             .date {
                 font-size: 0.65em;
             }
-    
-            button {
-                padding: 6px 12px;
-            }
-    
+
             .translation-buttons {
                 top: 3px;
                 right: 3px;
                 padding: 2px;
             }
-    
+
             .translation-buttons button {
-                width: 70px; /* Botões ainda menores para telas muito pequenas */
+                width: 70px;
+                /* Botões ainda menores para telas muito pequenas */
             }
         }
     </style>
-    
-    
-    
+
+
+
 
 
 
