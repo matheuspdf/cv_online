@@ -1,174 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Calibri, sans-serif; /* Fonte alterada para Calibri */
-      margin: 20px;
-      padding: 0 20px; /* Margem nas laterais */
-    }
-    header, section {
-      margin-bottom: 20px;
-    }
-    h1, h2, h3 {
-      margin: 5px 0;
-    }
-    .contact-info, .profiles, ul {
-      list-style: none;
-      padding: 0;
-    }
-    .profiles a {
-      text-decoration: none;
-      color: blue;
-    }
-    .highlight {
-      margin-bottom: 5px;
-    }
-    .date {
-      float: right;
-      font-size: 0.85em; /* Tamanho da fonte das datas ajustado */
-      color: #555; /* Cor mais clara para as datas */
-      font-weight: normal; /* Datas em letra normal */
-    }
-    section {
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
-    .academic-section {
-      margin-bottom: 40px; /* Aumenta o espaço entre as experiências acadêmicas */
-    }
-    .skills {
-      display: inline; /* Mantém AWS e Soft Skills na mesma linha */
-      margin-right: 10px; /* Espaço entre os itens */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        .academic-section h3 {
+            margin-top: 0.1px;
+            /* Ajuste o valor conforme necessário */
+        }
+
+        .academic-section p {
+            margin-top: 1px;
+            margin-bottom: 3px;
+            /* Ajuste o valor conforme necessário */
+        }
+
+        .academic-section ul {
+            margin-top: 1px;
+            /* Remove margem superior se necessário */
+        }
+
+        section ul li {
+            line-height: 0.2;
+        }
+
+
+        section>div {
+            margin-bottom: 35px;
+        }
+
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 20px;
+            padding: 0 20px;
+            color: black;
+            background-color: white;
+        }
+
+        header,
+        section {
+            margin-bottom: 25px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 3px 0;
+            color: inherit;
+        }
+
+        .contact-info,
+        .profiles,
+        ul {
+            margin-top: 5px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .profiles a {
+            text-decoration: none;
+        }
+
+        .profiles a:hover {
+            color: rgb(6, 14, 255);
+            /* Links ficam coloridos ao passar o mouse */
+        }
+
+        .highlight {
+            margin-bottom: 5px;
+            padding: 5px;
+            /* Padding para dar espaço ao texto */
+        }
+
+        .date {
+            float: right;
+            font-size: 0.85em;
+            color: rgb(0, 0, 0);
+            /* Data em preto */
+            font-weight: normal;
+        }
+
+        section {
+            border-top: 1px solid lightgray;
+            /* Bordas em cinza claro */
+            padding-top: 10px;
+        }
+
+        .academic-section {
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: inline;
+            margin-right: 10px;
+            color: inherit;
+            /* Herda a cor do texto */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: black;
+            /* Botões em preto */
+            color: white;
+            /* Texto do botão em branco */
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            /* Efeito de transição suave */
+        }
+
+        button:hover {
+            background-color: gray;
+            /* Botão fica cinza ao passar o mouse */
+        }
+
+        .translation-buttons {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: black;
+            /* Botões de tradução em preto */
+            color: white;
+            /* Texto em branco */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 5px;
+        }
+
+        @media print {
+            .translation-buttons {
+                display: none;
+                /* Oculta os botões ao imprimir */
+            }
+        }
+    </style>
+
+
+
+
 </head>
-<body>
 
-  <header>
-    <h1>Matheus Lopes</h1>
-    <ul class="contact-info">
-      <li>Email: <a href="mailto:matheuslopes.pdf@gmail.com">matheuslopes.pdf@gmail.com</a></li>
-      <li>Phone: <a href="https://wa.me/5511984028729"> (11) 98402-8729</a></li> <!-- Link do WhatsApp adicionado -->
-      <li>Website: <a href="https://registry.jsonresume.org/matheuspdf">https://registry.jsonresume.org/matheuspdf</a></li>
-      <li>Location: Taboão da Serra, SP</li>
-    </ul>
-    <ul class="profiles">
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/matheuspdf">matheuspdf</a></li>
-      <li>GitHub: <a href="https://github.com/matheuspdf">matheuspdf</a></li>
-    </ul>
-  </header>
-
-  <section>
-    <h2>Professional Experience</h2>
-
-    <div>
-      <h3>IT Assistant, SEG SAÚDE OCUPACIONAL <span class="date">08/2023 - 07/2024</span></h3>
-      <ul>
-        <li class="highlight">Development of automations using Google Colab, Sheets, App Sheet, and Python.</li>
-        <li class="highlight">Creation of workflows, technical documentation, and support for tickets.</li>
-        <li class="highlight">Management of Google accounts via Google Admin.</li>
-      </ul>
+<body class="light-mode">
+    <div id="language-buttons" class="translation-buttons">
+        <button onclick="switchToEnglish()">English</button>
+        <button onclick="switchToPortuguese()">Português</button>
+        <button onclick="downloadPDF()">Download PDF</button>
     </div>
 
-    <div>
-      <h3>Intern in IT Support, SEG SAÚDE OCUPACIONAL <span class="date">02/2022 - 07/2023</span></h3>
-      <ul>
-        <li class="highlight">Automations with Google ecosystem tools (Colab, Sheets, Python).</li>
-        <li class="highlight">Workflows, documentation, and ticket handling support.</li>
-        <li class="highlight">Google Admin account management.</li>
-      </ul>
-    </div>
+    <header>
+        <h1>Matheus Lopes</h1>
+        <ul class="contact-info">
+            <li>Email: <a href="mailto:matheuslopes.pdf@gmail.com">matheuslopes.pdf@gmail.com</a></li>
+            <li id="phone-text">Phone: <a href="https://wa.me/5511984028729">(11) 98402-8729</a></li>
+            <li id="location-text">Location: Taboão da Serra, SP</li>
+        </ul>
+        <ul class="profiles">
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/matheuspdf">matheuspdf</a></li>
+            <li>GitHub: <a href="https://github.com/matheuspdf">matheuspdf</a></li>
+        </ul>
+    </header>
 
-    <div>
-      <h3>Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class="date">02/2018 - 07/2021</span></h3>
-      <ul>
-        <li class="highlight">Music education in cello, individual and group lessons.</li>
-        <li class="highlight">Orchestra rehearsal conducting and score management.</li>
-      </ul>
-    </div>
+    <section>
+        <h2 id="professional-title">Professional Experience</h2>
 
-    <div>
-      <h3>Technical Department Assistant, TECNEL ELETRÔNICA <span class="date">10/2015 - 03/2017</span></h3>
-      <ul>
-        <li class="highlight">Design of printed circuit boards using CAM350.</li>
-        <li class="highlight">Assistant in production and electrical testing.</li>
-        <li class="highlight">Sales assistant for circuit board components quotes.</li>
-      </ul>
-    </div>
-  </section>
+        <div>
+            <h3 id="job1-title">IT Assistant, SEG SAÚDE OCUPACIONAL <span class="date">08/2023 - 07/2024</span></h3>
+            <ul>
+                <li class="highlight" id="exp1-1">Development of automations using Google Colab, Sheets, App Sheet, and
+                    Python.</li>
+                <li class="highlight" id="exp1-2">Creation of workflows, technical documentation, and support for
+                    tickets.</li>
+                <li class="highlight" id="exp1-3">Management of Google accounts via Google Admin.</li>
+            </ul>
+        </div>
 
-  <section>
-    <h2>Academic Background</h2>
+        <div>
+            <h3 id="exp2-title">Intern in IT Support, SEG SAÚDE OCUPACIONAL <span class="date">02/2022 - 07/2023</span>
+            </h3>
+            <ul>
+                <li class="highlight" id="exp2-1">Automations with Google ecosystem tools (Colab, Sheets, Python).</li>
+                <li class="highlight" id="exp2-2">Workflows, documentation, and ticket handling support.</li>
+                <li class="highlight" id="exp2-3">Google Admin account management.</li>
+            </ul>
+        </div>
 
-    <div class="academic-section">
-      <h3>Escola da Nuvem AWS re/Start - Cloud Computing <span class="date">10/2024 - Present</span></h3>
-      <p><strong>Training Program</strong></p>
-      <ul>
-        <li class="highlight">AWS, Soft Skills</li>
-      </ul>    </div>
+        <div>
+            <h3 id="exp3-title">Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class="date">02/2018 - 07/2021</span>
+            </h3>
+            <ul>
+                <li class="highlight" id="exp3-1">Music education in cello, individual and group lessons.</li>
+                <li class="highlight" id="exp3-2">Orchestra rehearsal conducting and score management.</li>
+            </ul>
+        </div>
 
-    <div class="academic-section">
-      <h3>FAM - Computer Science <span class="date">07/2024 - 06/2028</span></h3>
-      <p><strong>Bachelor's Degree</strong></p>
-    </div>
+        <div>
+            <h3 id="exp4-title">Technical Department Assistant, TECNEL ELETRÔNICA <span class="date">10/2015 -
+                    03/2017</span></h3>
+            <ul>
+                <li class="highlight" id="exp4-1">Design of printed circuit boards using CAM350.</li>
+                <li class="highlight" id="exp4-2">Assistant in production and electrical testing.</li>
+                <li class="highlight" id="exp4-3">Sales assistant for circuit board components quotes.</li>
+            </ul>
+        </div>
+    </section>
 
-    <div class="academic-section">
-      <h3>Department of Computer Science - UFMG - Modern Software Engineering <span class="date">08/2024 - 10/2024</span></h3>
-      <p><strong>Extension Course</strong></p>
-      <ul>
-        <li class="highlight">Agility, Design and Architecture, Testing and Refactoring</li>
-      </ul>
-    </div>
+    <section>
+        <h2 id="academic-title">Academic Background</h2>
 
-    <div class="academic-section">
-      <h3>DevPro - Back-end Development <span class="date">04/2023 - Present</span></h3>
-      <p><strong>BootCamp</strong></p>
-      <ul>
-        <li class="highlight">Python, Django, OOP, TDD, CI/CD, Docker, Linux</li>
-      </ul>
-    </div>
+        <div class="academic-section">
+            <h3 id="cloud-computing">Escola da Nuvem AWS re/Start - Cloud Computing <span class="date">10/2024 -
+                    Present</span></h3>
+            <p><strong id="edu1-type">Training Program</strong></p>
+            <ul>
+                <li class="highlight">AWS, Soft Skills</li>
+            </ul>
+        </div>
 
-    <div class="academic-section">
-      <h3>FAM - Analysis and Systems Development <span class="date">02/2022 - 06/2024</span></h3>
-      <p><strong>Technology Degree</strong></p>
-    </div>
+        <div class="academic-section">
+            <h3 id="computer-science">FAM - Computer Science <span class="date">07/2024 - 06/2028</span></h3>
+            <p><strong id="edu2-type">Bachelor's Degree</strong></p>
+        </div>
 
-    <div class="academic-section">
-      <h3>F.I.C - Music <span class="date">02/2018 - 12/2021</span></h3>
-      <p><strong>Bachelor's Degree</strong></p>
-    </div>
-  </section>
+        <div class="academic-section">
+            <h3 id="software-engineering">Department of Computer Science - UFMG - Modern Software Engineering <span
+                    class="date">08/2024 - 10/2024</span></h3>
+            <p><strong id="edu3-type">Extension Course</strong></p>
+            <ul>
+                <li class="highlight" id="edu3-desc">Agility, Design and Architecture, Testing and Refactoring</li>
+            </ul>
+        </div>
 
-  <section>
-    <h2>Projects</h2>
+        <div class="academic-section">
+            <h3 id="bootcamp">DevPro - Back-end Development <span class="date">04/2023 - Present</span></h3>
+            <p><strong>BootCamp</strong></p>
+            <ul>
+                <li class="highlight">Python, Django, OOP, TDD, CI/CD, Docker, Linux</li>
+            </ul>
+        </div>
 
-    <div>
-      <h3><a href="https://eventex.fly.dev/">Eventex - Event management system</a> <span class="date"></span></h3>
-      <p>Event promotion and management, covering:</p>
-      <ul>
-        <li class="highlight">GitHub Actions, Fly.io, Python, Django, Docker, TDD</li>
-      </ul>
-    </div>
 
-    <div>
-      <h3><a href="https://github.com/matheuspdf/fast_api_curso">FastAPI Course Project</a> <span class="date">Ongoing</span></h3>
-      <p>Task manager with JWT, database integration, and CRUD operations.</p>
-      <ul>
-        <li class="highlight">FastAPI, Pydantic, SQLAlchemy, Alembic, Pytest, GitHub Actions, Docker, Fly.io</li>
-      </ul>
-    </div>
+        <div class="academic-section">
+            <h3 id="ads">FAM - Analysis and Systems Development <span class="date">02/2022 - 06/2024</span></h3>
+            <p><strong id="edu4-type">Technology Degree</strong></p>
+        </div>
+    </section>
 
-    <div>
-      <h3><a href="https://pypi.org/project/libpythonpro-mlpdf/">libpythonpro-mlpdf - PyPi</a></h3>
-      <p>Python library for GitHub profile avatar retrieval using username.</p>
-      <ul>
-        <li class="highlight">Git, Virtualenv, PyPi, Pytest, Dependency Injection</li>
-      </ul>
-    </div>
-  </section>
+    <section>
+        <h2 id="projects-title">Projects</h2>
 
+        <div>
+            <h3 id="title-eventex"><a href="https://eventex.fly.dev/">Eventex - Event management system</a></h3>
+            <p id="project1-desc">Event promotion and management, covering:</p>
+            <ul>
+                <li class="highlight">GitHub Actions, Fly.io, Python, Django, Docker, TDD</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 id="title-fastapi"><a href="https://github.com/matheuspdf/fast_api_curso">FastAPI Course Project</a>
+                <span class="date">Ongoing</span>
+            </h3>
+            <p id="project2-desc">Task manager with JWT, database integration, and CRUD operations.</p>
+            <ul>
+                <li class="highlight">FastAPI, Pydantic, SQLAlchemy, Alembic, Pytest, GitHub Actions, Docker, Fly.io
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3><a href="https://pypi.org/project/libpythonpro-mlpdf/">libpythonpro-mlpdf - PyPi</a></h3>
+            <p id="project3-desc">Python library for GitHub profile avatar retrieval using username.</p>
+            <ul>
+                <li class="highlight">Git, Virtualenv, PyPi, Pytest, Dependency Injection</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const translations = {
+            en: {
+                "phone-text": "Phone: <a href='https://wa.me/5511984028729'>(11) 98402-8729</a>",
+                "location-text": "Location: Taboão da Serra, SP",
+                "professional-title": "Professional Experience",
+                "job1-title": "IT Assistant, SEG SAÚDE OCUPACIONAL <span class='date'>08/2023 - 07/2024</span>",
+                "exp1-1": "Development of automations using Google Colab, Sheets, App Sheet, and Python.",
+                "exp1-2": "Creation of workflows, technical documentation, and support for tickets.",
+                "exp1-3": "Management of Google accounts via Google Admin.",
+                "exp2-title": "Intern in IT Support, SEG SAÚDE OCUPACIONAL <span class='date'>02/2022 - 07/2023</span>",
+                "exp2-1": "Automations with Google ecosystem tools (Colab, Sheets, Python).",
+                "exp2-2": "Workflows, documentation, and ticket handling support.",
+                "exp2-3": "Google Admin account management.",
+                "exp3-title": "Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class='date'>02/2018 - 07/2021</span>",
+                "exp3-1": "Music education in cello, individual and group lessons.",
+                "exp3-2": "Orchestra rehearsal conducting and score management.",
+                "exp4-title": "Technical Department Assistant, TECNEL ELETRÔNICA <span class='date'>10/2015 - 03/2017</span>",
+                "exp4-1": "Design of printed circuit boards using CAM350.",
+                "exp4-2": "Assistant in production and electrical testing.",
+                "exp4-3": "Sales assistant for circuit board components quotes.",
+                "academic-title": "Academic Background",
+                "cloud-computing": "Escola da Nuvem AWS re/Start - Cloud Computing <span class='date'>10/2024 - Present</span>",
+                "edu1-type": "Training Program",
+                "computer-science": "FAM - Computer Science <span class='date'>07/2024 - 06/2028</span>",
+                "edu2-type": "Bachelor's Degree",
+                "ads": "FAM - Analysis and Systems Development <span class='date'>02/2022 - 06/2024</span>",
+                "edu4-type": "Technology Degree",
+                "software-engineering": "Department of Computer Science - UFMG - Modern Software Engineering <span class='date'>08/2024 - 10/2024</span>",
+                "edu3-type": "Extension Course",
+                "edu3-desc": "Agility, Design and Architecture, Testing and Refactoring",
+                "bootcamp": "DevPro - Back-end Development <span class='date'>04/2023 - Present</span>",
+                "projects-title": "Projects",
+                "title-eventex": "<a href='https://eventex.fly.dev/'>Eventex - Event management system</a>",
+                "title-fastapi": '<a href="https://github.com/matheuspdf/fast_api_curso">FastAPI Course Project</a> <span class="date">Ongoing</span>',
+                "project1-desc": "Event promotion and management, covering:",
+                "project2-desc": "Task manager with JWT, database integration, and CRUD operations.",
+                "project3-desc": "Python library for GitHub profile avatar retrieval using username.",
+            },
+            pt: {
+                "phone-text": "Telefone <a href='https://wa.me/5511984028729'>(11) 98402-8729</a>",
+                "location-text": "Localização: Taboão da Serra, SP",
+                "professional-title": "Experiência Profissional",
+                "job1-title": "Assistente de TI, SEG SAÚDE OCUPACIONAL <span class='date'>08/2023 - 07/2024</span>",
+                "exp1-1": "Desenvolvimento de automações utilizando Google Colab, Sheets, App Sheet e Python.",
+                "exp1-2": "Criação de fluxos de trabalho, documentação técnica e suporte a tickets.",
+                "exp1-3": "Gerenciamento de contas do Google via Google Admin.",
+                "exp2-title": "Estagiário em Suporte de TI, SEG SAÚDE OCUPACIONAL <span class='date'>02/2022 - 07/2023</span>",
+                "exp2-1": "Automações com ferramentas do ecossistema Google (Colab, Sheets, Python).",
+                "exp2-2": "Fluxos de trabalho, documentação e suporte ao manuseio de tickets.",
+                "exp2-3": "Gerenciamento de contas do Google Admin.",
+                "exp3-title": "Professor de Música, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class='date'>02/2018 - 07/2021</span>",
+                "exp3-1": "Educação musical em violoncelo, aulas individuais e em grupo.",
+                "exp3-2": "Condução de ensaios de orquestra e gerenciamento de partituras.",
+                "exp4-title": "Assistente de Departamento Técnico, TECNEL ELETRÔNICA <span class='date'>10/2015 - 03/2017</span>",
+                "exp4-1": "Projeto de placas de circuito impresso usando CAM350.",
+                "exp4-2": "Assistente na produção e testes elétricos.",
+                "exp4-3": "Assistente de vendas para orçamentos de componentes de placas de circuito.",
+                "academic-title": "Formação Acadêmica",
+                "cloud-computing": "Escola da Nuvem AWS re/Start - Computação em Nuvem <span class='date'>10/2024 - Em andamento</span>",
+                "edu1-type": "Programa de Formação",
+                "computer-science": "FAM - Ciência da Computação <span class='date'>07/2024 - 06/2028</span>",
+                "edu2-type": "Bacharelado",
+                "ads": "FAM - Análise e Desenvolvimento de Sistemas<span class='date'>02/2022 - 06/2024</span>",
+                "edu4-type": "Tecnólogo",
+                "software-engineering": "DCC - UFMG - Engenharia de Software Moderna <span class='date'>08/2024 - 10/2024</span>",
+                "edu3-type": "Curso de Extensão",
+                "edu3-desc": "Agilidade, Design e Arquitetura, Testes e Refatoração",
+                "bootcamp": "DevPro - Desenvolvimento Back-end <span class='date'>04/2023 - Em andamento</span>",
+                "projects-title": "Projetos",
+                "title-eventex": "<a href='https://eventex.fly.dev/'>Eventex - Sistema de gestão de eventos</a>",
+                "title-fastapi": '<a href="https://github.com/matheuspdf/fast_api_curso">Projeto do curso de FastAPI</a> <span class="date">Em andamento</span>',
+
+                "project1-desc": "Promoção e gerenciamento de eventos, abrangendo:",
+                "project2-desc": "Gerenciador de tarefas com JWT, integração de banco de dados e operações CRUD.",
+                "project3-desc": "Biblioteca Python para recuperação de avatar de perfil do GitHub usando nome de usuário.",
+            },
+        };
+
+        function switchToEnglish() {
+            const elements = document.querySelectorAll('[id]');
+            elements.forEach(element => {
+                const id = element.id;
+                if (translations.en[id]) {
+                    element.innerHTML = translations.en[id];
+                }
+            });
+        }
+
+        function switchToPortuguese() {
+            const elements = document.querySelectorAll('[id]');
+            elements.forEach(element => {
+                const id = element.id;
+                if (translations.pt[id]) {
+                    element.innerHTML = translations.pt[id];
+                }
+            });
+        }
+        function downloadPDF() {
+            window.print(); // Abre a caixa de diálogo de impressão do navegador
+        }
+    </script>
 </body>
+
 </html>
