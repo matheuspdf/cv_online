@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
+        #project1-desc,
+        #project2-desc,
+        #project3-desc {
+            margin: 1px;
+        }
+
         /* Ajuste de margens e espaçamento */
         .academic-section h3 {
             margin-top: 0.1px;
@@ -33,8 +39,8 @@
         /* Estilo geral do corpo */
         body {
             font-family: Calibri, sans-serif;
-            margin: 20px;
-            padding: 0 20px;
+            margin: 3px;
+            padding: 0 10px;
             color: black;
             background-color: white;
         }
@@ -259,17 +265,15 @@
         <h2 id="professional-title">Professional Experience</h2>
 
         <div>
-            <h3 id="job1-title">Intern in IT Support | IT Assistant, SEG SAÚDE OCUPACIONAL <span class="date">02/2022 -
-                    07/2023 | 08/2023 - 07/2024</span></h3>
+            <h3 id="job1-title">IT Support Intern | IT Assistant, SEG SAÚDE OCUPACIONAL <span class="date">08/2023 -
+                    07/2024 <br><br>02/2022 -
+                    07/2023</span></h3>
             <ul>
-                <li class="highlight" id="exp1-1">Developed automations using Google Colab, Google Sheets, App Sheet,
-                    and Python.</li>
-                <li class="highlight" id="exp1-2">Created workflows and technical documentation, as well as provided
-                    support for customer tickets.</li>
-                <li class="highlight" id="exp1-3">Managed Google accounts through Google Admin.</li>
-                <li class="highlight" id="exp1-4">Provided technical support in an occupational management system - SOC, assisting both clients and employees.</li>
-                <li class="highlight" id="exp1-5">Analyzed and monitored events (XML) related to health and safety at
-                    work, ensuring that information <br> was sent correctly according to eSocial regulations.</li>
+                <li class="highlight" id="exp1-1">Developed automations using Google Colab, Google Sheets, App Sheet, and Python.</li>
+                <li class="highlight" id="exp1-2">Created workflows and technical documentation, and provided customer support for tickets.</li>
+                <li class="highlight" id="exp1-3">Managed Google accounts via Google Admin.</li>
+                <li class="highlight" id="exp1-4">Provided technical support for an occupational management system - SOC, assisting both clients and employees.</li>
+                <li class="highlight" id="exp1-5">Analyzed and monitored events (XML) related to workplace health and safety, ensuring information <br> was submitted correctly in compliance with eSocial regulations.</li>
             </ul>
         </div>
 
@@ -277,10 +281,8 @@
             <h3 id="exp3-title">Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class="date">02/2018 - 07/2021</span>
             </h3>
             <ul>
-                <li class="highlight" id="exp3-1">Provided music education in cello, offering both individual and group
-                    lessons.</li>
-                <li class="highlight" id="exp3-2">I conducted orchestra rehearsals and managed the institution's sheet
-                    music collection.</li>
+                <li class="highlight" id="exp3-1">Taught cello lessons, both individually and in groups.</li>
+                <li class="highlight" id="exp3-2">Also organized orchestra rehearsals and managed the institution's sheet music collection.</li>
             </ul>
         </div>
 
@@ -288,11 +290,9 @@
             <h3 id="exp4-title">Technical Department Assistant, TECNEL ELETRÔNICA <span class="date">10/2015 -
                     03/2017</span></h3>
             <ul>
-                <li class="highlight" id="exp4-1">Designed and adapted printed circuit boards for mass production using
-                    CAM350 software.</li>
-                <li class="highlight" id="exp4-2">Assisted in the production of printed circuit boards and electrical
-                    testing.</li>
-                <li class="highlight" id="exp4-3">Conducted quotes for printed circuit boards as a Sales Assistant.</li>
+                <li class="highlight" id="exp4-1">Manipulated printed circuit boards (PCBs) according to design standards, using CAM350 to ensure mass production.</li>
+                <li class="highlight" id="exp4-2">Assisted in the production of printed circuit boards and electrical testing.</li>
+                <li class="highlight" id="exp4-3">Handled quotations for printed circuit boards as a Sales Assistant.</li>
             </ul>
         </div>
     </section>
@@ -333,7 +333,7 @@
 
 
         <div class="academic-section">
-            <h3 id="ads">FAM - Analysis and Systems Development <span class="date">02/2022 - 06/2024</span></h3>
+            <h3 id="ads">FAM - Systems Analysis and Development <span class="date">02/2022 - 06/2024</span></h3>
             <p><strong id="edu4-type">Technology Degree</strong></p>
         </div>
     </section>
@@ -362,7 +362,7 @@
 
         <div>
             <h3><a href="https://pypi.org/project/libpythonpro-mlpdf/">libpythonpro-mlpdf - PyPi</a></h3>
-            <p id="project3-desc">Python library for retrieving GitHub profile avatar using username.</p>
+            <p id="project3-desc">Python library for retrieving GitHub profile avatars using username.</p>
             <ul>
                 <li class="highlight">Git, Virtualenv, PyPi, Pytest, Dependency Injection</li>
             </ul>
@@ -370,54 +370,53 @@
     </section>
 
     <script>
-        function toggleMode() {
-            const body = document.body;
-            body.classList.toggle("dark-mode");
-            body.classList.toggle("light-mode");
-        }
         const translations = {
             en: {
                 "phone-text": "Phone: <a href='https://wa.me/5511984028729'>(11) 98402-8729</a>",
                 "location-text": "Location: Taboão da Serra, SP",
                 "professional-title": "Professional Experience",
-                "job1-title": "Intern in IT Support | IT Assistant, SEG SAÚDE OCUPACIONAL <span class='date'>02/2022 - 07/2023 | 08/2023 - 07/2024</span>",
+                "job1-title": "IT Support Intern | IT Assistant, SEG SAÚDE OCUPACIONAL <span class='date'>08/2023 - 07/2024 <br> <br> 02/2022 - 07/2023</span>",
                 "exp1-1": "Developed automations using Google Colab, Google Sheets, App Sheet, and Python.",
-                "exp1-2": "Created workflows and technical documentation, as well as provided support for customer tickets.",
-                "exp1-3": "Managed Google accounts through Google Admin.",
-                "exp1-4": "Provided technical support in an occupational management system - SOC, assisting both clients and employees.",
-                "exp1-5": "Analyzed and monitored events (XML) related to health and safety at work, ensuring that information <br> was sent correctly according to eSocial regulations.",
+                "exp1-2": "Created workflows and technical documentation, and provided customer support for tickets.",
+                "exp1-3": "Managed Google accounts via Google Admin.",
+                "exp1-4": "Provided technical support for an occupational management system - SOC, assisting both clients and employees.",
+                "exp1-5": "Analyzed and monitored events (XML) related to workplace health and safety, ensuring information <br> was submitted correctly in compliance with eSocial regulations.",
+                "exp2-title": "IT Support Intern, SEG SAÚDE OCUPACIONAL <span class='date'>02/2022 - 07/2023</span>",
+                "exp2-1": "Automations with Google ecosystem tools (Colab, Sheets, Python).",
+                "exp2-2": "Workflows, documentation, and ticket handling support.",
+                "exp2-3": "Google Admin account management.",
                 "exp3-title": "Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class='date'>02/2018 - 07/2021</span>",
-                "exp3-1": "Provided music education in cello, offering both individual and group lessons.",
-                "exp3-2": "I conducted orchestra rehearsals and managed the institution's sheet music collection.",
+                "exp3-1": "Taught cello lessons, both individually and in groups.",
+                "exp3-2": "Also organized orchestra rehearsals and managed the institution's sheet music collection.",
                 "exp4-title": "Technical Department Assistant, TECNEL ELETRÔNICA <span class='date'>10/2015 - 03/2017</span>",
-                "exp4-1": "Designed and adapted printed circuit boards for mass production using CAM350 software.",
+                "exp4-1": "Manipulated printed circuit boards (PCBs) according to design standards, using CAM350 to ensure mass production.",
                 "exp4-2": "Assisted in the production of printed circuit boards and electrical testing.",
-                "exp4-3": "Conducted quotes for printed circuit boards as a Sales Assistant.",
+                "exp4-3": "Handled quotations for printed circuit boards as a Sales Assistant.",
                 "academic-title": "Academic Background",
-                "cloud-computing": "Escola da Nuvem AWS re/Start - Cloud Computing <span class='date'>10/2024 - Present</span>",
+                "cloud-computing": "Escola da Nuvem AWS re/Start - Cloud Computing <span class='date'>10/2024 - 01/2025</span>",
                 "edu1-type": "Training Program",
                 "computer-science": "FAM - Computer Science <span class='date'>07/2024 - 06/2028</span>",
                 "edu2-type": "Bachelor's Degree",
-                "ads": "FAM - Analysis and Systems Development <span class='date'>02/2022 - 06/2024</span>",
+                "ads": "FAM - Systems Analysis and Development<span class='date'>02/2022 - 06/2024</span>",
                 "edu4-type": "Technology Degree",
                 "software-engineering": "Department of Computer Science - UFMG - Modern Software Engineering <span class='date'>08/2024 - 10/2024</span>",
                 "edu3-type": "Extension Course",
                 "edu3-desc": "Agility, Design and Architecture, Testing and Refactoring",
-                "bootcamp": "DevPro - Back-end Development <span class='date'>04/2023 - Present</span>",
+                "bootcamp": "DevPro - Back-end Development <span class='date'>04/2023 - 04/2025</span>",
                 "projects-title": "Projects",
                 "title-eventex": "<a href='https://eventex.fly.dev/'>Eventex - Event Management System</a>",
                 "title-fastapi": '<a href="https://github.com/matheuspdf/fast_api_curso">FastAPI Course Project</a> <span class="date">Ongoing</span>',
-
                 "project1-desc": "Event promotion and management, covering:",
                 "project2-desc": "Task manager with JWT, database integration, and CRUD operations.",
-                "project3-desc": "Python library for retrieving GitHub profile avatar using username."
+                "project3-desc": "Python library for retrieving GitHub profile avatars using username."
             }
+
             ,
             pt: {
                 "phone-text": "Telefone <a href='https://wa.me/5511984028729'>(11) 98402-8729</a>",
                 "location-text": "Localização: Taboão da Serra, SP",
                 "professional-title": "Experiência Profissional",
-                "job1-title": "Estagiário em Suporte de T.I. | Assistente de TI, SEG SAÚDE OCUPACIONAL <span class='date'>02/2022 - 07/2023 | 08/2023 - 07/2024</span>",
+                "job1-title": "Estagiário em Suporte de T.I. | Assistente de TI, SEG SAÚDE OCUPACIONAL <span class='date'>08/2023 - 07/2024 <br> <br> 02/2022 - 07/2023</span>",
                 "exp1-1": "Desenvolvi automações utilizando Google Colab, Google Sheets, App Sheet e Python.",
                 "exp1-2": "Criei fluxos de trabalho e documentações técnicas, além de fornecer suporte a chamados de clientes.",
                 "exp1-3": "Gerenciei contas do Google por meio do Google Admin.",
@@ -428,10 +427,10 @@
                 "exp2-2": "Fluxos de trabalho, documentação e suporte ao manuseio de tickets.",
                 "exp2-3": "Gerenciamento de contas do Google Admin.",
                 "exp3-title": "Professor de Música, ASSOCIAÇÃO MÚSICOS DO FUTURO <span class='date'>02/2018 - 07/2021</span>",
-                "exp3-1": "Ofereci educação musical em violoncelo, proporcionando aulas individuais e em grupo.",
-                "exp3-2": "Conduzi ensaios de orquestra e gerenciei partituras do acervo da instituição.",
+                "exp3-1": "Dei aulas de violoncelo, tanto individuais quanto em grupo.",
+                "exp3-2": "Também organizei ensaios de orquestra e cuidei do acervo de partituras da instituição.",
                 "exp4-title": "Assistente de Departamento Técnico, TECNEL ELETRÔNICA <span class='date'>10/2015 - 03/2017</span>",
-                "exp4-1": "Projetei e adaptei placas de circuito impresso para produção em massa utilizando o software CAM350.",
+                "exp4-1": "Manipulei placas de circuito impresso conforme padrões de design, utilizando o CAM350 para garantir a produção em massa.",
                 "exp4-2": "Auxiliei na produção de placas de circuito impresso e testes elétricos.",
                 "exp4-3": "Realizei cotações para placas de circuito impresso como Assistente de Vendas.",
                 "academic-title": "Formação Acadêmica",
