@@ -8,10 +8,8 @@
     <title>Matheus Lopes</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script> <!-- Adicione esta linha -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!-- Adicione esta linha -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
         body {
@@ -28,12 +26,16 @@
         #profile {
             padding-left: 20px;
         }
-        
-        #course-1, #course-2, #course-3 {
+
+        #course-1,
+        #course-2,
+        #course-3 {
             margin-bottom: 20px;
         }
 
-        #academic-1, #academic-2, #academic-3 {
+        #academic-1,
+        #academic-2,
+        #academic-3 {
             margin-bottom: 20px;
         }
 
@@ -204,132 +206,145 @@
 
 <body>
     <div id="content">
-    <div class="translation-buttons">
-        <button onclick="switchToEnglish()">English</button>
-        <button onclick="switchToPortuguese()">Português</button>
-        <button onclick="downloadPDF()">Download PDF</button>
+        <div class="translation-buttons">
+            <button onclick="switchToEnglish()">English</button>
+            <button onclick="switchToPortuguese()">Português</button>
+            <button onclick="downloadPDF()">Download PDF</button>
+        </div>
+
+        <header class="header-section">
+            <h1 id="name"><strong>Matheus Lopes</strong></h1>
+            <ul id="profile">
+                <li id="email-text">Email: <a href="mailto:matheuslopes.pdf@gmail.com"
+                        target="_blank">matheuslopes.pdf@gmail.com</a></li>
+                <li id="phone-text">Phone: <a href="https://wa.me/5511984028729" target="_blank">(11) 98402-8729</a>
+                </li>
+                <li id="location-text">Location: Taboão da Serra, SP</li>
+            </ul>
+            <ul id="profile">
+                <li id="linkedin-text">LinkedIn: <a href="https://www.linkedin.com/in/matheuspdf"
+                        target="_blank">https://linkedin.com/in/matheuspdf</a></li>
+                <li id="github-text">GitHub: <a href="https://github.com/matheuspdf"
+                        target="_blank">https://github.com/matheuspdf</a></li>
+            </ul>
+        </header>
+
+        <hr class="section-separator">
+
+        <section class="experience-section">
+            <h2 id="experience-title"><strong> Professional Experience</strong></h2>
+            <div>
+                <p class="experience-item" id="experience-1-title">Support Intern - IT Assistant, SEG SAÚDE OCUPACIONAL
+                    -
+                    02/2022 - 07/2024</p>
+                <ul class="experience-item-list" id="experience-1">
+                    <li id="exp1-1">Developed automations using Google Colab, Sheets, App Sheet, and Python.</li>
+                    <li id="exp1-2">Created workflows and technical documentation, and provided customer support for
+                        tickets.</li>
+                    <li id="exp1-3">Managed Google accounts via Google Admin.</li>
+                    <li id="exp1-4">Provided technical support for an occupational management system - SOC, assisting
+                        both clients and employees.</li>
+                    <li id="exp1-5">Analyzed and monitored events (XML) related to workplace health and safety, ensuring
+                        information <br>
+                        was submitted correctly in compliance with eSocial regulations.</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="experience-item" id="experience-2-title">Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018
+                    -
+                    07/2021</p>
+                <ul class="experience-item-list" id="experience-2">
+                    <li id="exp2-1">Taught cello lessons, individually and in groups.</li>
+                    <li id="exp2-2">Also organized orchestra rehearsals and managed the institution's sheet music
+                        collection.</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="experience-item" id="experience-3-title">Technical Department Assistant, TECNEL ELETRÔNICA -
+                    10/2015 - 03/2017</p>
+                <ul class="experience-item-list" id="experience-3">
+                    <li id="exp3-1">Manipulated printed circuit boards (PCBs) according to design standards, using
+                        CAM350 to
+                        ensure mass production.</li>
+                    <li id="exp3-2">Assisted in PCB production and electrical testing.</li>
+                    <li id="exp3-3">Handled quotations for PCBs as a Sales Assistant.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section class="academic-section">
+            <h2 id="academic-title"><strong>Academic</strong></h2>
+            <div>
+                <p class="academic-item" id="academic-1">FAM - Computer Science - Bachelor's Degree - <span>07/2024 -
+                        06/2028</span></p>
+            </div>
+
+            <div>
+                <p class="academic-item" id="academic-2">FAM - Systems Analysis and Development - Technology Degree</p>
+            </div>
+
+            <div>
+                <p class="academic-item" id="academic-3">FIC - Music Bachelor's</p>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section class="courses-section">
+            <h2 id="courses-title"><strong>Courses</strong></h2>
+            <div>
+                <p class="course-item" id="course-1">Escola da Nuvem <strong>AWS re/Start - Cloud Computing</strong> |
+                    AWS,
+                    Soft Skills, Linux, Database, Networks</p>
+            </div>
+
+            <div>
+                <p class="course-item" id="course-2">DCC - UFMG - <strong>Modern Software Engineering</strong> | Agile
+                    methodology, Software Design and Architecture, Testing and Refactoring</p>
+            </div>
+
+            <div>
+                <p class="course-item" id="course-3">DevPro - <strong>Bootcamp Back-end Web Development</strong> |
+                    Python,
+                    Django, OOP, TDD, CI/CD, Docker, Linux</p>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section class="projects-section">
+            <h2 id="projects-title"><strong>Projects</strong></h2>
+            <div>
+                <p class="project-item" id="title-eventex">Eventex - Event Management System - <a
+                        href="https://eventex.fly.dev/" target="_blank">https://eventex.fly.dev/</a></p>
+                <ul class="project-item-list">
+                    <li>GitHub Actions, Fly.io, Python, Django, Docker, TDD</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="project-item" id="title-fastapi">FastAPI Course Project - Ongoing - <a
+                        href='https://github.com/matheuspdf/fast_api_curso'
+                        target='_blank'>https://github.com/matheuspdf/fast_api_curso</a></p>
+                <ul class="project-item-list">
+                    <li>FastAPI, Pydantic, SQLAlchemy, Alembic, Pytest, GitHub Actions, Docker, Fly.io</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="project-item"> libpythonpro-mlpdf - PyPi - <a
+                        href="https://pypi.org/project/libpythonpro-mlpdf/"
+                        target="_blank">https://pypi.org/project/libpythonpro-mlpdf/</a></p>
+                <ul class="project-item-list">
+                    <li>Git, Virtual Enviroment, PyPi, Pytest, Dependency Injection</li>
+                </ul>
+            </div>
+        </section>
     </div>
-
-    <header class="header-section">
-        <h1 id="name"><strong>Matheus Lopes</strong></h1>
-        <ul id="profile">
-            <li id="email-text">Email: <a href="mailto:matheuslopes.pdf@gmail.com"
-                    target="_blank">matheuslopes.pdf@gmail.com</a></li>
-            <li id="phone-text">Phone: <a href="https://wa.me/5511984028729" target="_blank">(11) 98402-8729</a></li>
-            <li id="location-text">Location: Taboão da Serra, SP</li>
-        </ul>
-        <ul id="profile">
-            <li id="linkedin-text">LinkedIn: <a href="https://www.linkedin.com/in/matheuspdf"
-                    target="_blank">https://linkedin.com/in/matheuspdf</a></li>
-            <li id="github-text">GitHub: <a href="https://github.com/matheuspdf"
-                    target="_blank">https://github.com/matheuspdf</a></li>
-        </ul>
-    </header>
-
-    <hr class="section-separator">
-
-    <section class="experience-section">
-        <h2 id="experience-title"><strong>Experience</strong></h2>
-        <div>
-            <p class="experience-item" id="experience-1-title">Support Intern - IT Assistant, SEG SAÚDE OCUPACIONAL -
-                02/2022 - 07/2024</p>
-            <ul class="experience-item-list" id="experience-1">
-                <li id="exp1-1">Developed automations using Google Colab, Sheets, App Sheet, and Python.</li>
-                <li id="exp1-2">Created workflows and technical documentation, and provided customer support for
-                    tickets.</li>
-                <li id="exp1-3">Managed Google accounts via Google Admin.</li>
-                <li id="exp1-4">Provided technical support for an occupational management system - SOC, assisting both clients and employees.</li>
-                <li id="exp1-5">Analyzed and monitored events (XML) related to workplace health and safety, ensuring information <br>
-                    was submitted correctly in compliance with eSocial regulations.</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="experience-item" id="experience-2-title">Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018 -
-                07/2021</p>
-            <ul class="experience-item-list" id="experience-2">
-                <li id="exp2-1">Taught cello lessons, individually and in groups.</li>
-                <li id="exp2-2">Also organized orchestra rehearsals and managed the institution's sheet music
-                    collection.</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="experience-item" id="experience-3-title">Technical Department Assistant, TECNEL ELETRÔNICA -
-                10/2015 - 03/2017</p>
-            <ul class="experience-item-list" id="experience-3">
-                <li id="exp3-1">Manipulated printed circuit boards (PCBs) according to design standards, using CAM350 to
-                    ensure mass production.</li>
-                <li id="exp3-2">Assisted in PCB production and electrical testing.</li>
-                <li id="exp3-3">Handled quotations for PCBs as a Sales Assistant.</li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="section-separator">
-
-    <section class="academic-section">
-        <h2 id="academic-title"><strong>Academic</strong></h2>
-        <div>
-            <p class="academic-item" id="academic-1">FAM - Computer Science - Bachelor's Degree - <span>07/2024 -
-                    06/2028</span></p>
-        </div>
-
-        <div>
-            <p class="academic-item" id="academic-2">FAM - Systems Analysis and Development - Technology Degree</p>
-        </div>
-
-        <div>
-            <p class="academic-item" id="academic-3">FIC - Music Bachelor's</p>
-        </div>
-    </section>
-
-    <hr class="section-separator">
-
-    <section class="courses-section">
-        <h2 id="courses-title"><strong>Courses</strong></h2>
-        <div>
-            <p class="course-item" id="course-1">Escola da Nuvem <strong>AWS re/Start - Cloud Computing</strong> | AWS,
-                Soft Skills, Linux, Database, Networks</p>
-        </div>
-
-        <div>
-            <p class="course-item" id="course-2">DCC - UFMG - <strong>Modern Software Engineering</strong> | Agile
-                methodology, Software Design and Architecture, Testing and Refactoring</p>
-        </div>
-
-        <div>
-            <p class="course-item" id="course-3">DevPro - <strong>Bootcamp Back-end Web Development</strong> | Python,
-                Django, OOP, TDD, CI/CD, Docker, Linux</p>
-        </div>
-    </section>
-
-    <hr class="section-separator">
-
-    <section class="projects-section">
-        <h2 id="projects-title"><strong>Projects</strong></h2>
-        <div>
-            <p class="project-item" id="title-eventex">Eventex - Event Management System - <a href="https://eventex.fly.dev/" target="_blank">https://eventex.fly.dev/</a></p>
-            <ul class="project-item-list">
-                <li>GitHub Actions, Fly.io, Python, Django, Docker, TDD</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="project-item" id="title-fastapi">FastAPI Course Project - Ongoing - <a href='https://github.com/matheuspdf/fast_api_curso' target='_blank'>https://github.com/matheuspdf/fast_api_curso</a></p>
-            <ul class="project-item-list">
-                <li>FastAPI, Pydantic, SQLAlchemy, Alembic, Pytest, GitHub Actions, Docker, Fly.io</li>
-            </ul>
-        </div>
-
-        <div>
-            <p class="project-item"> libpythonpro-mlpdf - PyPi - <a href="https://pypi.org/project/libpythonpro-mlpdf/" target="_blank">https://pypi.org/project/libpythonpro-mlpdf/</a></p>
-            <ul class="project-item-list">
-                <li>Git, Virtual Enviroment, PyPi, Pytest, Dependency Injection</li>
-            </ul>
-        </div>
-    </section>
-</div>
 
     <script>
         const translations = {
@@ -370,7 +385,7 @@
                 "course-1": "Escola da Nuvem <strong>AWS re/Start - Cloud Computing</strong> | AWS, Soft Skills, Linux, Database, Networks",
                 "course-2": "DCC - UFMG - <strong>Modern Software Engineering</strong> | Agile methodology, Software Design and Architecture, Testing and Refactoring",
                 "course-3": "DevPro - <strong>Bootcamp Back-end Web Development</strong> | Python, Django, OOP, TDD, CI/CD, Docker, Linux",
-                
+
                 "title-eventex": "Eventex - Event Management System - <a href='https://eventex.fly.dev/' target='_blank'>https://eventex.fly.dev/</a>",
                 "title-fastapi": "FastAPI Course Project - Ongoing - <a href='https://github.com/matheuspdf/fast_api_curso' target='_blank'>https://github.com/matheuspdf/fast_api_curso</a>"
             },
@@ -415,7 +430,8 @@
 
                 "title-eventex": "Eventex - Sistema de gestão de eventos - <a href='https://eventex.fly.dev/' target='_blank'>https://eventex.fly.dev/</a>",
 
-                "title-fastapi": "FastAPI Course Project - Em andamento - <a href='https://github.com/matheuspdf/fast_api_curso' target='_blank'>https://github.com/matheuspdf/fast_api_curso</a>"            }
+                "title-fastapi": "FastAPI Course Project - Em andamento - <a href='https://github.com/matheuspdf/fast_api_curso' target='_blank'>https://github.com/matheuspdf/fast_api_curso</a>"
+            }
         };
 
         function switchToEnglish() {
