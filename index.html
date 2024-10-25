@@ -14,8 +14,12 @@
     <style>
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin: 20px;
+        }
+
+        h1  {
+            margin-bottom: 0px;
         }
 
         h2 {
@@ -25,28 +29,32 @@
 
         #profile {
             padding-left: 20px;
+            margin: 9px;
         }
 
         #course-1,
         #course-2,
         #course-3 {
-            margin-bottom: 20px;
+            margin-bottom: 3px;
         }
 
         #academic-1,
         #academic-2,
         #academic-3 {
-            margin-bottom: 20px;
+            margin-bottom: 2px;
         }
 
         .section-separator {
-            border-top: 1px solid black;
-            margin: 20px 0;
+            border-top: 1px solid rgb(181, 181, 181);
+            margin: 1px 0;
         }
 
         .course-item,
         .academic-item {
-            margin: 5px;
+            margin: 2px;
+        }
+        #academic-1.academic-item, #academic-2.academic-item {
+            margin: 2px;
         }
 
         .experience-item {
@@ -54,10 +62,22 @@
             margin-bottom: 4px;
         }
 
-        .experience-item-list {
-            margin-top: 5px;
-            margin-bottom: 35px;
+
+        .experience-item-list li {
+            margin-bottom: 7px;
+            margin-top: 3px;
+            /* Ajuste o valor conforme necessário */
         }
+
+         ul {
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+        #experience-3 {
+            margin-bottom: 5px;
+
+        }
+
 
         .project-item {
             margin-bottom: 1px;
@@ -66,7 +86,11 @@
 
         .project-item-list {
             margin-top: 3px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+        }
+
+        #title-eventex.project-item {
+            margin: 2px;
         }
 
         /* Estilo de botões */
@@ -215,7 +239,7 @@
         <header class="header-section">
             <h1 id="name"><strong>Matheus Lopes</strong></h1>
             <ul id="profile">
-                <li id="email-text">Email: <a href="mailto:matheuslopes.pdf@gmail.com"
+                <li id="email-text">E-mail: <a href="mailto:matheuslopes.pdf@gmail.com"
                         target="_blank">matheuslopes.pdf@gmail.com</a></li>
                 <li id="phone-text">Phone: <a href="https://wa.me/5511984028729" target="_blank">(11) 98402-8729</a>
                 </li>
@@ -234,42 +258,57 @@
         <section class="experience-section">
             <h2 id="experience-title"><strong> Professional Experience</strong></h2>
             <div>
-                <p class="experience-item" id="experience-1-title">Support Intern - IT Assistant, SEG SAÚDE OCUPACIONAL
+                <p class="experience-item" id="experience-1-title"><strong>IT Assistant - Support Intern</strong>, SEG
+                    SAÚDE OCUPACIONAL
                     -
                     02/2022 - 07/2024</p>
                 <ul class="experience-item-list" id="experience-1">
-                    <li id="exp1-1">Developed automations using Google Colab, Sheets, App Sheet, and Python.</li>
-                    <li id="exp1-2">Created workflows and technical documentation, and provided customer support for
-                        tickets.</li>
-                    <li id="exp1-3">Managed Google accounts via Google Admin.</li>
-                    <li id="exp1-4">Provided technical support for an occupational management system - SOC, assisting
-                        both clients and employees.</li>
-                    <li id="exp1-5">Analyzed and monitored events (XML) related to workplace health and safety, ensuring
-                        information <br>
-                        was submitted correctly in compliance with eSocial regulations.</li>
+                    <li id="exp1-1">Collect system information through integration with APIs in Python, providing data
+                        for NoCode applications in an automated way.</li>
+                    <li id="exp1-2">Create NoCode scripts and automations to automate repetitive or complex tasks using
+                        Google Colab, Google Sheets, App Sheet, and Python.</li>
+                    <li id="exp1-3">Train end users on the use of systems and tools, ensuring they can operate
+                        autonomously.</li>
+                    <li id="exp1-4">Assist in the setup, installation, and maintenance of hardware and software (Windows
+                        and Linux), as well as peripheral devices.</li>
+                    <li id="exp1-5">Manage user permissions and configurations across various systems (Google Workspace,
+                        OMS - Occupational Management System, MADU - Occupational Medicine and Safety Software),
+                        ensuring they are aligned with the company's security policies.</li>
+                    <li id="exp1-6">Assist in defining processes, as well as documenting and creating user guides,
+                        ensuring all procedures follow a standard.</li>
+                    <li id="exp1-7">Analyze and monitor XML-formatted events related to occupational health and safety,
+                        ensuring the correct submission of information according to the standards established by
+                        eSocial.</li>
+                    <li id="exp1-8">Handle Level 1 (L1) technical support calls, diagnosing and resolving user issues
+                        related to software and hardware.</li>
                 </ul>
             </div>
 
             <div>
-                <p class="experience-item" id="experience-2-title">Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018
+                <p class="experience-item" id="experience-2-title"><strong>Music Teacher</strong>, ASSOCIAÇÃO MÚSICOS DO
+                    FUTURO - 02/2018
                     -
                     07/2021</p>
                 <ul class="experience-item-list" id="experience-2">
-                    <li id="exp2-1">Taught cello lessons, individually and in groups.</li>
-                    <li id="exp2-2">Also organized orchestra rehearsals and managed the institution's sheet music
-                        collection.</li>
+                    <li id="exp2-1">Teach cello lessons, both individually and in groups, promoting the musical
+                        development of students and adapting the teaching to their needs and skill levels.</li>
+                    <li id="exp2-2">Organize orchestra rehearsals, coordinating logistics and repertoire, as well as
+                        maintaining the institution's sheet music collection, ensuring all materials were available and
+                        in good condition.</li>
                 </ul>
             </div>
 
             <div>
-                <p class="experience-item" id="experience-3-title">Technical Department Assistant, TECNEL ELETRÔNICA -
+                <p class="experience-item" id="experience-3-title"><strong>Technical Department Assistant</strong>,
+                    TECNEL ELETRÔNICA -
                     10/2015 - 03/2017</p>
                 <ul class="experience-item-list" id="experience-3">
-                    <li id="exp3-1">Manipulated printed circuit boards (PCBs) according to design standards, using
-                        CAM350 to
-                        ensure mass production.</li>
-                    <li id="exp3-2">Assisted in PCB production and electrical testing.</li>
-                    <li id="exp3-3">Handled quotations for PCBs as a Sales Assistant.</li>
+                    <li id="exp3-1">Manipulate printed circuit boards according to design standards, using CAM350 to
+                        ensure quality and feasibility for mass production.</li>
+                    <li id="exp3-2">Assist in the production of printed circuit boards and perform electrical testing.
+                    </li>
+                    <li id="exp3-3">Quote printed circuit boards as a Sales Assistant, analyzing requirements and raw
+                        material particularities.</li>
                 </ul>
             </div>
         </section>
@@ -350,7 +389,7 @@
         const translations = {
             en: {
                 "name": "<strong>Matheus Lopes</strong>",
-                "email-text": "Email: <a href='mailto:matheuslopes.pdf@gmail.com'>matheuslopes.pdf@gmail.com</a>",
+                "email-text": "E-mail: <a href='mailto:matheuslopes.pdf@gmail.com'>matheuslopes.pdf@gmail.com</a>",
                 "phone-text": "Phone: <a href='https://wa.me/5511984028729'>(11) 98402-8729</a>",
                 "location-text": "Location: Taboão da Serra, SP",
                 "linkedin-text": "LinkedIn: <a href='https://www.linkedin.com/in/matheuspdf'>https://linkedin.com/in/matheuspdf</a>",
@@ -358,23 +397,28 @@
 
 
                 "experience-title": "<strong>Professional Experience</strong>",
-                "experience-1-title": "Support Intern - IT Assistant, SEG SAÚDE OCUPACIONAL - 02/2022 - 07/2024",
-                "exp1-1": "Developed automations using Google Colab, Sheets, App Sheet, and Python.",
-                "exp1-2": "Created workflows and technical documentation, and provided customer support for tickets.",
-                "exp1-3": "Managed Google accounts via Google Admin.",
-                "exp1-4": "Provided technical support for an occupational management system - SOC, assisting both clients and employees.",
-                "exp1-5": "Analyzed and monitored events (XML) related to workplace health and safety, ensuring information <br> was submitted correctly in compliance with eSocial regulations.",
+                "experience-1-title": "<strong>IT Assistant - Support Intern</strong>, SEG SAÚDE OCUPACIONAL - 02/2022 - 07/2024",
+                "exp1-1": "Collect system information through integration with APIs in Python, providing data for NoCode applications in an automated way.",
+                "exp1-2": "Create NoCode scripts and automations to automate repetitive or complex tasks using Google Colab, Google Sheets, App Sheet, and Python.",
+                "exp1-3": "Train end users on the use of systems and tools, ensuring they can operate autonomously.",
+                "exp1-4": "Assist in the setup, installation, and maintenance of hardware and software (Windows and Linux), as well as peripheral devices.",
+                "exp1-5": "Manage user permissions and configurations across various systems (Google Workspace, OMS - Occupational Management System, MADU - Occupational Medicine and Safety Software), ensuring they are aligned with the company's security policies.",
+                "exp1-6": "Assist in defining processes, as well as documenting and creating user guides, ensuring all procedures follow a standard.",
+                "exp1-7": "Analyze and monitor XML-formatted events related to occupational health and safety, ensuring the correct submission of information according to the standards established by eSocial.",
+                "exp1-8": "Handle Level 1 (L1) technical support calls, diagnosing and resolving user issues related to software and hardware.",
 
 
-                "experience-2-title": "Music Teacher, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018 - 07/2021",
-                "exp2-1": "Taught cello lessons, individually and in groups.",
-                "exp-2": "Also organized orchestra rehearsals and managed the institution's sheet music collection.",
 
 
-                "experience-3-title": "Technical Department Assistant, TECNEL ELETRÔNICA - 10/2015 - 03/2017",
-                "exp3-1": "Manipulated printed circuit boards (PCBs) according to design standards, using CAM350 to ensure mass production.",
-                "exp3-2": "Assisted in PCB production and electrical testing.",
-                "exp3-3": "Handled quotations for PCBs as a Sales Assistant.",
+                "experience-2-title": "<strong>Music Teacher</strong>, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018 - 07/2021",
+                "exp2-1": "Teach cello lessons, both individually and in groups, promoting the musical development of students and adapting the teaching to their needs and skill levels.",
+                "exp2-2": "Organize orchestra rehearsals, coordinating logistics and repertoire, as well as maintaining the institution's sheet music collection, ensuring all materials were available and in good condition.",
+
+
+                "experience-3-title": "<strong>Technical Department Assistant</strong>, TECNEL ELETRÔNICA - 10/2015 - 03/2017",
+                "exp3-1": "Manipulate printed circuit boards according to design standards, using CAM350 to ensure quality and feasibility for mass production.",
+                "exp3-2": "Assist in the production of printed circuit boards and perform electrical testing.",
+                "exp3-3": "Quote printed circuit boards as a Sales Assistant, analyzing requirements and raw material particularities.",
 
                 "academic-title": "<strong>Academic</strong>",
                 "courses-title": "<strong>Courses</strong>",
@@ -398,23 +442,27 @@
                 "github-text": "GitHub: <a href='https://github.com/matheuspdf'>https://github.com/matheuspdf</a>",
 
                 "experience-title": "<strong>Experiência Profissional</strong>",
-                "experience-1-title": "Estagiário de Suporte - Assistente de TI, SEG SAÚDE OCUPACIONAL - 02/2022 - 07/2024",
-                "exp1-1": "Desenvolvi automações utilizando Google Colab, Google Sheets, App Sheet e Python.",
-                "exp1-2": "Criei fluxos de trabalho e documentações técnicas, além de fornecer suporte a chamados de clientes.",
-                "exp1-3": "Gerenciei contas do Google por meio do Google Admin.",
-                "exp1-4": "Ofereci suporte técnico em um sistema de gestão ocupacional - SOC, auxiliando tanto clientes quanto funcionários.",
-                "exp1-5": "Analisei e monitorei eventos (XML) relacionados à saúde e segurança no trabalho, garantindo que as informações <br> fossem enviadas corretamente em conformidade com as normas do eSocial.",
+                "experience-1-title": "<strong>Assistente de TI - Estagiário de Suporte</strong>, SEG SAÚDE OCUPACIONAL - 02/2022 - 07/2024",
 
 
-                "experience-2-title": "Professor de Música, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018 - 07/2021",
-                "exp2-1": "Dei aulas de violoncelo tanto individuais quanto em grupo.",
-                "exp2-2": "Também organizei ensaios de orquestra e cuidei do acervo de partituras da instituição.",
+                "exp1-1": "Coletar informações do sistema por meio de integração com APIs em Python, fornecendo dados para aplicações NoCode de forma automatizada.",
+                "exp1-2": "Criar scripts e automações NoCode para automatizar tarefas repetitivas ou complexas utilizando Google Colab, Google Sheets, App Sheet e Python.",
+                "exp1-3": "Treinar usuários finais na utilização de sistemas e ferramentas, garantindo que eles possam operar com autonomia.",
+                "exp1-4": "Auxiliar na configuração, instalação e manutenção de hardware e software (Windows e Linux), além de dispositivos periféricos.",
+                "exp1-5": "Gerenciar permissões e configurações de usuários em diversos sistemas (Google Workspace, SOC - Sistema de Gestão Ocupacional, MADU - Software de Medicina e Segurança do Trabalho), garantindo que estejam alinhados com as políticas de segurança da empresa.",
+                "exp1-6": "Auxiliar na definição de processos, bem como na documentação e criação de guias para usuários, garantindo que todos os procedimentos sigam um padrão.",
+                "exp1-7": "Analisar e monitorar eventos em formato XML relacionados à saúde e segurança no trabalho, assegurando o envio correto das informações conforme as normas estabelecidas pelo eSocial.",
+                "exp1-8": "Atender a chamados de suporte técnico de Nível 1 (N1), diagnosticando e resolvendo problemas de usuários relacionados a software e hardware.",
+
+                "experience-2-title": "<strong>Professor de Música</strong>, ASSOCIAÇÃO MÚSICOS DO FUTURO - 02/2018 - 07/2021",
+                "exp2-1": "Lecionar aulas de violoncelo, tanto individuais quanto em grupo, promovendo o desenvolvimento musical dos alunos e adaptando o ensino às suas necessidades e níveis de habilidade.",
+                "exp2-2": "Organizar ensaios de orquestra, coordenando a logística e o repertório, além de cuidar do acervo de partituras da instituição, garantindo que todos os materiais estivessem disponíveis e em bom estado.",
 
 
-                "experience-3-title": "Assistente de Produção e Testes, TECNEL ELETRÔNICA - 10/2015 - 03/2017",
-                "exp3-1": "Manipulei placas de circuito impresso conforme padrões de design, utilizando o CAM350 para garantir a produção em massa.",
-                "exp3-2": "Auxiliei na produção de placas de circuito impresso e testes elétricos.",
-                "exp3-3": "Realizei cotações para placas de circuito impresso como Assistente de Vendas.",
+                "experience-3-title": "<strong>Assistente de Departamento Técnico</strong>, TECNEL ELETRÔNICA - 10/2015 - 03/2017",
+                "exp3-1": "Manipular placas de circuito impresso conforme padrões de design, utilizando o CAM350 para assegurar a qualidade e a viabilidade da produção em massa.",
+                "exp3-2": "Auxiliar na produção de placas de circuito impresso e na realização de testes elétricos.",
+                "exp3-3": "Realizar cotações para placas de circuito impresso como Assistente de Vendas, analisando os requisitos e as particularidades da matéria-prima.",
 
 
                 "academic-title": "<strong>Formação Acadêmica</strong>",
